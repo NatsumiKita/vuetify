@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-btn @click="linkPage('test1')">test1</v-btn>
+    <v-btn @click="linkPage('test2')">test2</v-btn>
+    <v-btn @click="linkPage('test3')">test3</v-btn>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+  },
+  methods: {
+    linkPage (path) {
+      this.$router.push(path)
+    }
   }
 }
 </script>
